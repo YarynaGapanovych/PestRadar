@@ -96,7 +96,7 @@ header .header-rigth .search:before {
   left: 7px;
   content: '';
   display: block;
-  background: url("/img/question.svg") no-repeat center center;
+  background: url("../img/question.svg") no-repeat center center;
   z-index: 10;
 }
 
@@ -111,7 +111,7 @@ header .user {
   margin: 0 20px 0 30px;
 }
 
-header .user::before {
+header .user:before {
   width: 22px;
   height: 22px;
   position: absolute;
@@ -122,7 +122,7 @@ header .user::before {
   content: '';
   display: block;
   position: absolute;
-  background: url("/img/user-pict.svg") no-repeat center center;
+  background: url("../img/user-pict.svg") no-repeat center center;
 }
 
 header .log-btn {
@@ -217,7 +217,7 @@ main .sidebar .support-btn:before {
   display: block;
   content: '';
   position: absolute;
-  background: url("/img/phone.svg") no-repeat center center;
+  background: url("../img/phone.svg") no-repeat center center;
 }
 
 main .table-wrapper {
@@ -424,7 +424,7 @@ main .flipper .export-btn:before {
   display: block;
   content: '';
   position: absolute;
-  background: url("/img/exp-arrow.svg") no-repeat center center;
+  background: url("../img/exp-arrow.svg") no-repeat center center;
 }
 
 main .flipper .export-btn:focus {
