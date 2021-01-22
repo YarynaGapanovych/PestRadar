@@ -10,110 +10,128 @@
 </head>
 
 <body>
-  <header>
-    <div class="logo">
-      <img src="img/logo.svg" alt="logo">
-      <div class="logo-title">Pest Radar</div>
-    </div>
-    <div class="header-rigth">
-      <div class="search">
-        <input type="search" placeholder="Search">
+  <header class="header">
+    <div class="logo header__logo">
+      <img class="logo__img" src="img/logo.svg" alt="logo">
+      <div class="logo__title">
+        <a class="logo__link" href="#">Pest Radar</a>
       </div>
-      <div class="user">Astarta Company</div>
-      <button class="log-btn">Log out</button>
+    </div>
+    <div class="header__rigth">
+      <div class="search">
+        <input class="search__input" type="search" placeholder="Search">
+      </div>
+      <div class="header__user">Astarta Company</div>
+      <button class="header__log-btn">Log out</button>
     </div>
   </header>
 
-  <main>
+  <main class="container">
     <section class="sidebar">
       <nav>
-        <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li class="active"><a href="#">Events</a></li>
-          <li><a href="#">Modules</a></li>
-          <li><a href="#">Settings</a></li>
+        <ul class="sidebar__menu">
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="#">Dashboard</a>
+          </li>
+          <li class="sidebar__item sidebar__item_active">
+            <a class="sidebar__link" href="#">Events</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="#">Modules</a>
+          </li>
+          <li class="sidebar__item">
+            <a class="sidebar__link" href="#">Settings</a>
+          </li>
         </ul>
       </nav>
-      <button class="support-btn">Support</button>
+      <button class="support-btn sidebar__support-btn">Support</button>
     </section>
 
     <section class="table-wrapper">
-      <table>
-        <tr>
-          <th><input type="checkbox"></th>
-          <th>Location</th>
-          <th>Date and time</th>
-          <th>Event</th>
-          <th>Videos</th>
-          <th>Source</th>
-          <th>Tags</th>
+      <table class="table">
+        <tr class="table__row">
+          <th class="table__cell table__cell_header"><input type="checkbox"></th>
+          <th class="table__cell table__cell_header">Location</th>
+          <th class="table__cell table__cell_header">Date and time</th>
+          <th class="table__cell table__cell_header">Event</th>
+          <th class="table__cell table__cell_header">Videos</th>
+          <th class="table__cell table__cell_header">Source</th>
+          <th class="table__cell table__cell_header">Tags</th>
         </tr>
-        <tr>
-          <td><input type="checkbox"></td>
-          <td>Warehouse Astarta 1</td>
-          <td>12/09/2020 14:55:34</td>
-          <td><img src="img/alarm.svg" alt="alarm"></td>
-          <td>2/2</td>
-          <td>Module 1</td>
-          <td>
-            <span class="denger high-denger">Fire</span>
-            <span class="denger">Animals</span>
-            <span class="denger">Human</span>
+        <tr class="table__row">
+          <td class="table__cell"><input type="checkbox"></td>
+          <td class="table__cell">Warehouse Astarta 1</td>
+          <td class="table__cell">12/09/2020 14:55:34</td>
+          <td class="table__cell">
+            <img class="table__cell-img" src="img/alarm.svg" alt="alarm">
+          </td>
+          <td class="table__cell">2/2</td>
+          <td class="table__cell">Module 1</td>
+          <td class="table__cell">
+            <span class="table__denger denger high-denger">Fire</span>
+            <span class="table__denger denger">Animals</span>
+            <span class="table__denger denger">Human</span>
           </td>
         </tr>
-        <tr>
-          <td><input type="checkbox"></td>
-          <td>Warehouse Astarta 1</td>
-          <td>12/09/2020 14:55:34</td>
-          <td><img src="img/high-temp.svg" alt="alarm"></td>
-          <td>2/2</td>
-          <td>Module 1</td>
-          <td>
-            <span class="denger">Insects</span>
+        <tr class="table__row">
+          <td class="table__cell"><input type="checkbox"></td>
+          <td class="table__cell">Warehouse Astarta 1</td>
+          <td class="table__cell">12/09/2020 14:55:34</td>
+          <td class="table__cell">
+            <img class="table__cell-img" src="img/high-temp.svg" alt="alarm">
+          </td>
+          <td class="table__cell">2/2</td>
+          <td class="table__cell">Module 1</td>
+          <td class="table__cell">
+            <span class="table__denger denger">Insects</span>
           </td>
         </tr>
-        <tr>
-          <td><input type="checkbox"></td>
-          <td>Warehouse Astarta 1</td>
-          <td>12/09/2020 14:55:34</td>
-          <td><img src="img/fire.svg" alt="alarm"></td>
-          <td>2/2</td>
-          <td>Module 1</td>
-          <td>
-            <span class="denger">Insects</span>
+        <tr class="table__row">
+          <td class="table__cell"><input type="checkbox"></td>
+          <td class="table__cell">Warehouse Astarta 1</td>
+          <td class="table__cell">12/09/2020 14:55:34</td>
+          <td class="table__cell">
+            <img class="table__cell-img" src="img/fire.svg" alt="alarm">
+          </td>
+          <td class="table__cell">2/2</td>
+          <td class="table__cell">Module 1</td>
+          <td class="table__cell">
+            <span class="table__denger denger">Insects</span>
           </td>
         </tr>
-        <tr>
-          <td><input type="checkbox"></td>
-          <td>Warehouse Astarta 1</td>
-          <td>12/09/2020 14:55:34</td>
-          <td><img src="img/water.svg" alt="alarm"></td>
-          <td>2/2</td>
-          <td>Module 1</td>
-          <td>
-            <span class="denger">Insects</span>
-            <span class="denger">Animals</span>
+        <tr class="table__row">
+          <td class="table__cell"><input type="checkbox"></td>
+          <td class="table__cell">Warehouse Astarta 1</td>
+          <td class="table__cell">12/09/2020 14:55:34</td>
+          <td class="table__cell">
+            <img class="table__cell-img" src="img/water.svg" alt="alarm">
+          </td>
+          <td class="table__cell">2/2</td>
+          <td class="table__cell">Module 1</td>
+          <td class="table__cell">
+            <span class="table__denger denger">Insects</span>
+            <span class="table__denger denger">Animals</span>
           </td>
         </tr>
       </table>
 
       <section class="flipper">
-        <span>Page</span>
-        <button class="arrow-btn">
-          <img src="img/arrow-left.svg" alt="">
-        </button>
-        <ul class="pages-list">
-          <li class="active-page">1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>...</li>
-          <li>1276</li>
-        </ul>
-        <button class="arrow-btn">
-          <img src="img/arrow-rigth.svg" alt="">
+        <span class="flipper__span">Page</span>
+        <button class="flipper__arrow-btn">
+          <img class="flipper__arrow-img" src="img/arrow-left.svg" alt="">
         </button>
 
-        <button class="export-btn">Export</button>
+        <a href="#" class="flipper__page-btn flipper__page-btn_active">1</a>
+        <a href="#" class="flipper__page-btn">2</a>
+        <a href="#" class="flipper__page-btn">3</a>
+        <span class="flipper__dots">...</span>
+        <a href="#" class="flipper__page-btn">1276</a>
+
+        <button class="flipper__arrow-btn">
+          <img class="flipper__arrow-img" src="img/arrow-rigth.svg" alt="">
+        </button>
+
+        <button class="export-btn flipper__export-btn">Export</button>
       </section>
     </section>
   </main>
