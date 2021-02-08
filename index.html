@@ -11,48 +11,54 @@
 
 <body>
   <header class="header">
-    <div class="logo header__logo">
+    <a class="logo">
       <img class="logo__img" src="img/logo.svg" alt="logo">
-      <div class="logo__title">
-        <a class="logo__link" href="#">Pest Radar</a>
-      </div>
-    </div>
-    <div class="header__rigth">
+      <span class="logo__title">Pest Radar</span>
+    </a>
+    <div class="header__user">
       <div class="search">
         <input class="search__input" type="search" placeholder="Search">
       </div>
-      <div class="header__user">Astarta Company</div>
-      <button class="header__log-btn">Log out</button>
+      <div class="header__user-name">Astarta Company</div>
+      <a href="#" class="header__log-btn">Log out</a>
     </div>
   </header>
 
   <main class="container">
-    <section class="sidebar">
-      <nav>
-        <ul class="sidebar__menu">
-          <li class="sidebar__item">
-            <a class="sidebar__link" href="#">Dashboard</a>
-          </li>
-          <li class="sidebar__item sidebar__item_active">
-            <a class="sidebar__link" href="#">Events</a>
-          </li>
-          <li class="sidebar__item">
-            <a class="sidebar__link" href="#">Modules</a>
-          </li>
-          <li class="sidebar__item">
-            <a class="sidebar__link" href="#">Settings</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="support-btn sidebar__support-btn">Support</button>
-    </section>
+    <nav class="sidebar">
+      <ul class="sidebar__menu">
+        <li class="sidebar__item">
+          <a class="sidebar__link" href="#">Dashboard</a>
+        </li>
+        <li class="sidebar__item sidebar__item_active">
+          <a class="sidebar__link" href="#">Events</a>
+        </li>
+        <li class="sidebar__item">
+          <a class="sidebar__link" href="#">Modules</a>
+        </li>
+        <li class="sidebar__item">
+          <a class="sidebar__link" href="#">Settings</a>
+        </li>
+      </ul>
+      <a href="#" class="support-btn sidebar__support-btn">Support</a>
+    </nav>
 
-    <section class="table-wrapper">
+    <section class="content">
       <table class="table">
         <tr class="table__row">
           <th class="table__cell table__cell_header"><input type="checkbox"></th>
-          <th class="table__cell table__cell_header">Location</th>
-          <th class="table__cell table__cell_header">Date and time</th>
+          <th class="table__cell table__cell_header">
+            Location
+            <span class="filter">
+              <img src="img/list.svg" alt="">
+            </span>
+          </th>
+          <th class="table__cell table__cell_header">
+            Date and time
+            <span class="filter">
+              <img src="img/list.svg" alt="">
+            </span>
+          </th>
           <th class="table__cell table__cell_header">Event</th>
           <th class="table__cell table__cell_header">Videos</th>
           <th class="table__cell table__cell_header">Source</th>
@@ -117,21 +123,21 @@
 
       <section class="flipper">
         <span class="flipper__span">Page</span>
-        <button class="flipper__arrow-btn">
+        <a href="#" class="flipper__arrow-btn">
           <img class="flipper__arrow-img" src="img/arrow-left.svg" alt="">
-        </button>
+        </a>
 
         <a href="#" class="flipper__page-btn flipper__page-btn_active">1</a>
         <a href="#" class="flipper__page-btn">2</a>
         <a href="#" class="flipper__page-btn">3</a>
-        <span class="flipper__dots">...</span>
+        <span class="flipper__span">...</span>
         <a href="#" class="flipper__page-btn">1276</a>
 
-        <button class="flipper__arrow-btn">
+        <a href="#" class="flipper__arrow-btn">
           <img class="flipper__arrow-img" src="img/arrow-rigth.svg" alt="">
-        </button>
+        </a>
 
-        <button class="export-btn flipper__export-btn">Export</button>
+        <a href="#" class="export-btn flipper__export-btn">Export</a>
       </section>
     </section>
   </main>

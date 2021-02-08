@@ -21,36 +21,34 @@
 }
 
 body {
+  @include flex(normal, normal , column);
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.logo {
+  @include flex(center);
+  margin-left: 30px;
+  cursor: pointer;
+  
+  &__title {
+    margin-left: 10px;
+    color: #0d2f48;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: -0.58px;
+    text-decoration: none;
+  }
 }
 
 .header {
   @include size(100%, 55px);
   @include flex(center, space-between);
 
+  min-height: 55px;
   background: #f6fbff;
 
- 
-
-  .logo {
-    @include flex(center);
-    margin-left: 30px;
-
-    &__title {
-      margin-left: 10px;
-    }
-
-    &__link {
-      color: #0d2f48;
-      font-size: 24px;
-      font-weight: 400;
-      letter-spacing: -0.58px;
-      text-decoration: none;
-    }
-  }
-    
-
-  .header__rigth {
+  .header__user {
     @include flex(center);
 
     margin-right: 50px;
@@ -96,7 +94,7 @@ body {
   }
 
   // user
-  &__user {
+  &__user-name {
     color: #1f3b51;
     font-size: 20px;
     font-weight: 400;
@@ -122,6 +120,7 @@ body {
     letter-spacing: -1px;
     background: none;
     border: none;
+    text-decoration: none;
     cursor: pointer;
     transition: .3s;
 
@@ -143,7 +142,8 @@ body {
 
 
   .sidebar {
-    @include size(260px, 1024px);
+    min-width: 260px;
+    height: 100vh;
     background-color: #14234f;
     display: flex;
     flex-direction: column;
@@ -197,6 +197,7 @@ body {
       background: none;
       border: none;
       cursor: pointer;
+      text-decoration: none;
       position: relative;
       padding-left: 20px;
       transition: .3s;
@@ -220,7 +221,7 @@ body {
     }
   }
 
-  .table-wrapper {
+  .content {
     @include flex(center, space-between, column);
 
     margin: 20px auto;
@@ -254,6 +255,10 @@ body {
           &:nth-child(1) {
             width: 5%;
             text-align: center;
+
+            input[type="checkbox"] {
+              transform: scale(1.4);
+            }
           }
   
           &:nth-child(2) {
@@ -280,53 +285,47 @@ body {
             width: 30%;
           }
 
-          &_header:nth-child(2),
-          &_header:nth-child(3) {
-            position: relative;
-
-            &:before {
-              @include size(16px, 14px);
-              @include position(13px, 0, 0, 65px);
-              display: block;
-              content: '';
-              background: url('../img/list.svg') no-repeat center center;
-              background-size: 15px 11px;
-              opacity: .6;
-              cursor: pointer;
-            }
-          }
-
           &_header:nth-child(3):before {
             @include position(13px, 0, 0, 98px);
         }
-
-        &__denger {
-          margin-right: 2%;
-          
-          &:last-child {
-            margin-right: 0;
-          }
-        }
         
-          .denger {
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 400;
-            letter-spacing: -0.8px;
-            background: #1f3b51;
-            opacity: 0.67;
-            border-radius: 2px;
-            padding: 5px 13px;
-          }
-
-          .high-denger {
-            background-color: #e02020;
-          }
-
-          
-
     }
+  }
 
+  .filter {
+    @include size(16px, 14px);
+    opacity: .6;
+    cursor: pointer;
+    margin-left: 5px ;
+    transition: .3s;
+
+    &:hover {
+      opacity: .7;
+    img {
+        transform: rotate(10deg)
+        
+      }
+    }
+  }
+
+  .denger {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: -0.8px;
+    background: #1f3b51;
+    opacity: 0.67;
+    border-radius: 2px;
+    padding: 5px 13px;
+  }
+
+  .denger + .denger {
+    margin-left: 5px;
+
+  }
+
+  .high-denger {
+    background-color: #e02020;
   }
 
 // bottom of the page // flipper
@@ -340,6 +339,7 @@ body {
       font-size: 14px;
       font-weight: 400;
       line-height: 22px;
+      padding: 0 5px;
     }
 
     &__arrow-btn {
@@ -350,7 +350,7 @@ body {
       transition: .3s;
 
       &:hover {
- 
+
       }
 
       &:focus {
@@ -404,17 +404,19 @@ body {
       }
 
     .export-btn {
-      @include size(120px, 30px);
+      @include size(100px, 30px);
       border-radius: 2px;
       border: none;
       background-color: #1549eb;
       cursor: pointer;
+      text-decoration: none;
       color: #ffffff;
       font-size: 17px;
       font-weight: 500;
-      line-height: 22px;
-      padding-left: 30px;
+      line-height: 28px;
       transition: .3s;
+      padding-right: 20px;
+      text-align: right;
 
       &:before {
         @include size(21px, 16px);
